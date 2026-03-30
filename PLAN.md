@@ -36,7 +36,7 @@ Build #11 | Archetype: steel-frame-industrial-cool | Emergency-First order
 
 ### Task 5.1: Hero Section (with Phone)
 - **File:** `src/components/home/Hero.tsx`
-- **Layout:** SectionFullBleed. Dark gunmetal (section-bg-deep). Chassis-bar top + bottom framing (8px structural bars). Content area: left-aligned on desktop with max-w-3xl. Badge-label "24/7 DIESEL SPECIALISTS" above heading. type-hero heading "Keep Your Fleet Moving." type-hero-sub subtitle. Phone number in large safety orange with Phone icon. Two CTAs: btn-profile "Get a Quote" + btn-profile-ghost "Our Services". Background: gradient-mesh overlay + grain-overlay.
+- **Layout:** SectionFullBleed. Dark gunmetal (section-bg-deep). Chassis-bar top + bottom framing (8px structural bars). Content area: left-aligned on desktop with max-w-3xl. Badge-label "24/7 DIESEL SPECIALISTS" above heading. type-hero heading "Keep Your Fleet Moving." type-hero-sub subtitle. Phone number in large safety orange with Phone icon. Two CTAs: btn-profile "Get a Quote" + btn-profile-ghost "Our Services". Background: GradientSweep effect component for animated gradient-mesh overlay + grain-overlay.
 - **Animation:** blur-sharpen+parallax — content blurs in and sharpens, background has subtle parallax depth.
 - **Anti-pattern:** Do NOT centre text on desktop. Do NOT use a stock photo background. Do NOT hide the phone number below the fold.
 - **Responsive:** Mobile: centred text, stacked CTAs, phone number prominent. Tablet: left-aligned, side-by-side CTAs. Desktop: left-aligned in left 60%, right 40% has decorative industrial illustration/shapes.
