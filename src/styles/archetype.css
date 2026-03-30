@@ -103,6 +103,21 @@
 }
 
 /* ============================================
+   LINK HOVER STATES — CSS-only, no JS handlers
+   ============================================ */
+.nav-link-hover:hover {
+  color: var(--clr-text-primary) !important;
+}
+
+.footer-link-accent:hover {
+  color: var(--clr-accent) !important;
+}
+
+.footer-link-primary:hover {
+  color: var(--clr-primary-light) !important;
+}
+
+/* ============================================
    IMAGE TREATMENTS
    ============================================ */
 .img-duotone {
