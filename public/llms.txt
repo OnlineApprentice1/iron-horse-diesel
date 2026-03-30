@@ -1,0 +1,43 @@
+# Iron Horse Diesel Service
+
+## Business Summary
+Iron Horse Diesel Service is a diesel-only repair and heavy equipment service shop located in Sault Ste. Marie, Ontario, Canada. The business has operated since 1995 and specialises exclusively in diesel-powered vehicles and equipment.
+
+## Services
+- Diesel engine repair and rebuild (in-shop)
+- Fleet maintenance programmes (commercial and industrial accounts)
+- Heavy equipment service (off-road machinery, construction, forestry)
+- Fuel system diagnostics and fuel injection repair
+- 24/7 mobile breakdown service (field dispatch)
+
+## Service Area
+Primary: Sault Ste. Marie, Ontario
+Extended: Algoma District, Blind River, Elliot Lake, Wawa, Northern Ontario corridor
+
+## Contact
+Phone: (705) 555-0318
+Email: service@ironhorsediesel.ca
+Website: https://ironhorsediesel.ca
+Location: Sault Ste. Marie, Ontario, Canada
+
+## Hours of Operation
+Monday to Friday: 7:00 am – 6:00 pm
+Saturday: 8:00 am – 2:00 pm
+Sunday: Closed
+Emergency breakdown: 24/7
+
+## Owner
+Gary Fillion
+
+## Structure
+- Home page: overview, services, process, testimonials
+- Services page: full description of all service offerings
+- About page: business history, team, certifications
+- Contact page: form, map, phone, hours
+
+## Technology
+Website built with Next.js (App Router), hosted in Canada.
+
+## Legal
+Privacy policy: https://ironhorsediesel.ca/privacy (PIPEDA compliant)
+Terms of service: https://ironhorsediesel.ca/terms
