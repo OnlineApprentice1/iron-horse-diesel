@@ -1,0 +1,163 @@
+/* ============================================
+   Archetype: Steel Frame Industrial Cool
+   Iron Horse Diesel Service
+   ============================================
+   Site-specific additions that build ON TOP of
+   profile-cool.css. Does NOT redefine card tiers,
+   badges, buttons, dividers, or section backgrounds.
+   ============================================ */
+
+/* ============================================
+   GRAIN OVERLAY — industrial texture
+   Apply to sections that need tactile depth.
+   Usage: <div className="grain-overlay">
+   ============================================ */
+.grain-overlay {
+  position: relative;
+}
+
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+/* ============================================
+   RIVET DOT GRID — background pattern
+   Subtle metallic dot grid for dark sections.
+   Usage: <div className="rivet-grid">
+   ============================================ */
+.rivet-grid {
+  position: relative;
+}
+
+.rivet-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle at center,
+    color-mix(in oklch, var(--clr-primary-muted) 30%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* ============================================
+   CROSS-BRACE DIVIDER
+   Two diagonal lines crossing in an X pattern
+   with a bolt-circle at the intersection.
+   Usage: <div className="cross-brace-divider">
+   ============================================ */
+.cross-brace-divider {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cross-brace-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom right,
+      transparent calc(50% - 1px),
+      var(--clr-surface-3) calc(50% - 1px),
+      var(--clr-surface-3) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      to top right,
+      transparent calc(50% - 1px),
+      var(--clr-surface-3) calc(50% - 1px),
+      var(--clr-surface-3) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+  max-width: 200px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.cross-brace-divider::after {
+  content: "";
+  position: relative;
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-primary);
+  background: var(--clr-surface-1);
+}
+
+/* ============================================
+   IMAGE TREATMENTS
+   ============================================ */
+.img-duotone {
+  filter: grayscale(40%) contrast(1.1);
+}
+
+.img-gradient-mask {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.img-elevated {
+  box-shadow:
+    0 4px 16px color-mix(in oklch, var(--clr-surface-1) 60%, transparent),
+    0 1px 3px color-mix(in oklch, var(--clr-surface-1) 40%, transparent);
+}
+
+/* ============================================
+   CHASSIS FRAME BAR — thick structural bars
+   for hero framing. Heavy, not decorative.
+   ============================================ */
+.chassis-bar {
+  height: 8px;
+  background: linear-gradient(
+    90deg,
+    var(--clr-surface-3),
+    var(--clr-primary-muted),
+    var(--clr-surface-3)
+  );
+  position: relative;
+}
+
+.chassis-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklch, white 8%, transparent),
+    transparent 50%,
+    color-mix(in oklch, black 15%, transparent)
+  );
+}
+
+/* ============================================
+   ACCENT HIGHLIGHT — safety orange emphasis
+   For phone numbers, emergency callouts
+   ============================================ */
+.accent-highlight {
+  color: var(--clr-accent);
+  font-weight: 700;
+}
+
+.accent-highlight-bg {
+  background: color-mix(in oklch, var(--clr-accent) 12%, transparent);
+  border-left: 3px solid var(--clr-accent);
+  padding: 1rem 1.5rem;
+}

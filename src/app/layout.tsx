@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
+import { Barlow_Condensed, Outfit } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-/* TODO: Import Google Fonts for this build's heading + body fonts
-import { FontName } from "next/font/google";
-const heading = FontName({ variable: "--font-heading", subsets: ["latin"], display: "swap" });
-const body = FontName({ variable: "--font-body", subsets: ["latin"], display: "swap" });
-*/
+const heading = Barlow_Condensed({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const body = Outfit({
+  variable: "--font-body",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -45,7 +54,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="custom" /* className={`${heading.variable} ${body.variable}`} */>
+    <html lang="en" data-theme="ironhorse" className={`${heading.variable} ${body.variable}`}>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
